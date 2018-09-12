@@ -13,6 +13,7 @@ var handlebars = require('express-handlebars');
 keystone.init({
 	'name': 'Making',
 	'brand': 'Making',
+	'port': 8080,
 
 	'sass': 'public',
 	'static': 'public',
