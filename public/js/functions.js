@@ -20,8 +20,7 @@ document.addEventListener('scroll', function (e) {
    }
 });
 
-function burger() {
-   let burgerNavLinks = document.getElementsByClassName('burger-nav-links')[0];
-
-   burgerNavLinks.classList.add('activate');
+function burgerToggle(el, test) {
+   el.classList.toggle('open');
+   el.parentNode.childNodes[3].classList.toggle('activate')
 }
