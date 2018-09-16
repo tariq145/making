@@ -29,6 +29,18 @@
 			</li>
 			{{/each}}
 		</ul>
+		<div class="burger">
+			<div onclick="burger()" id="burger-icon">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="burger-nav-links">
+			{{# each navLinks}}
+			<a href='/{{key}}' {{#ifeq ../section key}} class='active' {{/ifeq}}>{{label}}</a>
+			{{/each}}
+			</div>
+		</div>
 	</div>
 
 	<div id="body">

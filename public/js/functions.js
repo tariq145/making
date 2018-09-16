@@ -19,3 +19,9 @@ document.addEventListener('scroll', function (e) {
       logo.style.width = '350px';
    }
 });
+
+function burger() {
+   let burgerNavLinks = document.getElementsByClassName('burger-nav-links')[0];
+
+   burgerNavLinks.classList.add('activate');
+}
