@@ -6,9 +6,9 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'gallery';
+	locals.section = 'about';
 
 	// Render the view
-	view.render('gallery');
+	view.render('about');
 
 };

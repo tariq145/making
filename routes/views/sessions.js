@@ -11,7 +11,10 @@ exports = module.exports = function (req, res) {
 		post: req.params.post,
 	};
 
-	locals.data = {};
+	 // Load Video
+	 var Sessions = keystone.list('Session');
+   
+	 view.query('videos', Sessions.model.find())
 
 	// Render the view
 	view.render('sessions');

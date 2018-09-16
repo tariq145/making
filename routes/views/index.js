@@ -9,9 +9,9 @@ exports = module.exports = function (req, res) {
 	// item in the header navigation.
 	locals.section = 'home';
 
-	locals.data = {
-		text: 'tariq'
-	}
+	var Videos = keystone.list('Music Video');
+	view.query('videos', Videos.model.find());
+
 	// Render the view
 	view.render('index');
 };

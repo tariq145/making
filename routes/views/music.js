@@ -9,20 +9,21 @@ exports = module.exports = function(req, res) {
 
    // Load Video
    var Videos = keystone.list('Music Video');
-
-   Videos.model.find()
-   .limit(1)
-   .exec()
-   .then(function(videos){
-      console.log(videos);
-   }, function(err) {
-      throw err;
-   }).
-   then(function(result) {
-      console.log(result);
-   }, function(err) {
-      console.log(err);
-   });
+   
+   view.query('videos', Videos.model.find())
+   // Videos.model.find()
+   // .limit(1)
+   // .exec()
+   // .then(function(videos){
+   //    console.log(videos);
+   // }, function(err) {
+   //    throw err;
+   // }).
+   // then(function(result) {
+   //    console.log(result);
+   // }, function(err) {
+   //    console.log(err);
+   // });
 
    // Render View
    view.render('music');

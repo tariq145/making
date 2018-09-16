@@ -1,5 +1,19 @@
-{{# each data}}
-   <p>swag</p>
-   {{title}}
-   swaggy
-{{/each}}
+<div class="music-text">
+   <span class="heading">
+      music videos
+   </span>
+</div>
+
+<div class="feed-container">
+   {{# each videos}}
+   <div class="feed-item" style="
+         background: url('{{image.secure_url}}') no-repeat center center;
+         -webkit-background-size: cover;
+	      -moz-background-size: cover;
+	      -o-background-size: cover;
+	      background-size: cover;
+         ">
+      <span class="name">{{title}}</span>
+   </div>
+   {{/each}}
+</div>
