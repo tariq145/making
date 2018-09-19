@@ -39,7 +39,7 @@ h1 {
 #nav ul {
   display: none;
   padding: 10px 18px;
-  margin: 0;
+  margin: 5px 0 0 0;
   list-style-type: none;
   float: right;
   transition: padding .3s; }
@@ -152,6 +152,16 @@ h1 {
 
 section {
   position: relative; }
+
+.scroll-arrow {
+  cursor: pointer;
+  position: absolute;
+  margin-right: -50%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0); }
+  .scroll-arrow svg :hover {
+    fill: #fff; }
 
 .color-band {
   display: flex; }

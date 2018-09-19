@@ -25,12 +25,12 @@ function burgerToggle(el) {
    el.parentNode.parentNode.classList.toggle('open-burger');
 }
 
-function scrollTo(el) {
+function scroller(el) {
    console.log('swag');
    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-   window.scroll({
-      top: h-47,
+   window.scrollTo({
+      top: h-60,
       left: 0,
-      behavior: smooth
+      behavior: 'smooth'
    })
 }
