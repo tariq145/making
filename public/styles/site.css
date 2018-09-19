@@ -84,14 +84,16 @@ h1 {
 #nav .burger-nav-links {
   width: 100vw;
   height: 0;
+  overflow: hidden;
   margin: 45px 0 0 0;
   display: flex;
   flex-direction: column;
-  text-align: right;
-  transition: all 1s; }
+  text-align: center;
+  transition: all 0.9s; }
 
 #nav .burger-nav-links a {
-  transform: translate(200px, -30px);
+  opacity: 0;
+  transform: translate(0, -30px);
   padding: 10px; }
 
 #nav .burger-nav-links.activate a {
