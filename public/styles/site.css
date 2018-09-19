@@ -93,8 +93,12 @@ h1 {
 
 #nav .burger-nav-links a {
   opacity: 0;
+  border-bottom: 0.05px solid #0c1121;
   transform: translate(0, -30px);
   padding: 10px; }
+
+#nav .burger-nav-links a:hover {
+  color: white; }
 
 #nav .burger-nav-links.activate a {
   animation: seqIn 0.6s forwards; }
