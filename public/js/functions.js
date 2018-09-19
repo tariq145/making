@@ -1,4 +1,3 @@
-// Handles scrolling style for navbar
 document.addEventListener('scroll', function (e) {
    let nav = document.getElementById('nav');
    let logo = document.getElementsByClassName('logo')[0];
@@ -8,13 +7,13 @@ document.addEventListener('scroll', function (e) {
 
    if(yPos < -10) {
       nav.style.backgroundColor = '#0D1323';
-      nav.style.height = '47px';
+      nav.style.height = '60px';
       navList.style.padding= '5px 18px';
       logo.style.width = '340px';
 
    }else{
       nav.style.backgroundColor = '';
-      nav.style.height = '50px';
+      nav.style.height = '62px';
       navList.style.padding= '10px 18px';
       logo.style.width = '350px';
    }
@@ -22,7 +21,8 @@ document.addEventListener('scroll', function (e) {
 
 function burgerToggle(el) {
    el.classList.toggle('open');
-   el.parentNode.childNodes[3].classList.toggle('activate')
+   el.parentNode.childNodes[3].classList.toggle('activate');
+   el.parentNode.parentNode.classList.toggle('open-burger');
 }
 
 function scrollTo(el) {

@@ -29,10 +29,10 @@ h1 {
 	position: fixed;
 	z-index: 10;
 	width: 100%;
-	height: 56px;
+	height: 62px;
 	overflow: hidden;
 	-webkit-transition: background .3s, height .3s ; 
-    transition: background .3s, height .3s ;
+	transition: background .6s, height .3s ;
 }
 
 #nav ul {
@@ -60,7 +60,7 @@ h1 {
 #nav #burger-icon {
 	cursor: pointer;
 	position: absolute;
-	padding: 5px 20px;
+	padding: 12px 20px;
 	right: 0;
 	transition: all 1s;
 }
@@ -71,6 +71,10 @@ h1 {
 	background-color: white;
 	margin: 7px 0;
 	transition: 0.4s;
+}
+
+.open-burger {
+	background: #0D1323;
 }
 
 .open .bar1 {
@@ -89,11 +93,11 @@ h1 {
 	width:100vw;
 	height: 0;
 	overflow: hidden;
-	margin: 45px 0 0 0;
+	margin: 60px 0 0 0;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	transition: all 0.9s;
+	transition: all 0.5s;
 }
 
 #nav  .burger-nav-links a {
@@ -160,15 +164,10 @@ h1 {
 }
 
 #nav .logo {
-	margin-top: -27px;
-	transition: width 0.5s
+	margin-top: -20px;
+	transition: all 0.3s;
 }
 
-.logo-test {
-	width: 200px;
-	height: auto;
-	background: url('/images/logo.png');
-}
 
 section {
 	position: relative;
@@ -206,30 +205,33 @@ section {
 
 .feed-text {
 	position: relative;
-	height: calc(50vh - 47px);
+	height: 300px;
 }
 
 .heading {
 	position: absolute;
 	bottom: 0;
-	left: 50%;
 	font-family: font_bold;
-	margin-right: -50%;
 	color: #E2CC00;
-	transform: translate(-50%, -50%);
-	font-size: 150px;
+	font-size: 5em;
+	text-align: center;
+	max-width: 100%;
 }
 
 .feed-item {
 	position: relative;
 	max-width: 100%;
-	height: 50vh;
+	height: 250px;
 }
+
+
 
 .feed-item .name {
 	position: absolute;
 	bottom: 10px;
 	left: 50%;
+	text-align: center;
+	min-width: 250px;
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
 	font-weight: bold;
@@ -239,18 +241,19 @@ section {
 }
 
 #collaborators {
-	min-height: 100vh;
+	background: #0D1323;
+	text-align: center;
+	height: 300px;
+	
 }
 .collab-text {
 	position: relative;
-	height: 40vh;
 }
 
 
 .music-text{
 	position: relative;
-	height: 50vh;
-	
+	height: 300px;
 }
 
 #About {
@@ -363,7 +366,7 @@ section {
 }
 
 #Player .video{
-	margin-top: 100px;
+	margin-top: 62px;
 }
 
 #Player .video iframe{
@@ -394,4 +397,8 @@ section {
 	background: red;
 	width: 100%;
 	height: 300px;
+}
+
+.player-feed a:visited{
+	color: black;
 }
