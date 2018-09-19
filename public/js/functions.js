@@ -20,7 +20,17 @@ document.addEventListener('scroll', function (e) {
    }
 });
 
-function burgerToggle(el, test) {
+function burgerToggle(el) {
    el.classList.toggle('open');
    el.parentNode.childNodes[3].classList.toggle('activate')
+}
+
+function scrollTo(el) {
+   console.log('swag');
+   let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+   window.scroll({
+      top: h-47,
+      left: 0,
+      behavior: smooth
+   })
 }

@@ -14,13 +14,20 @@
    </div>
 
    <div class="player-feed">
-      this is a player feed
-      <ul>
          {{# each data.videos}}
-         <li>
-            <a href="/player/{{slug}}">{{title}}</a>
-         </li>
+            <a href="/player/{{slug}}">
+               <div class="feed-item">
+                  <div class="feed-item" style="
+                  background: url('{{image.secure_url}}') no-repeat center center;
+                  -webkit-background-size: cover;
+                  -moz-background-size: cover;
+                  -o-background-size: cover;
+                  background-size: cover;
+                  ">
+            <span class="name">{{title}}</span>
+         </div>
+               </div>
+            </a>
          {{/each}}
-      </ul>
    </div>
 </div>

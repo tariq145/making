@@ -82,14 +82,16 @@ h1 {
   transform: rotate(45deg) translate(-2px, -10px); }
 
 #nav .burger-nav-links {
+  width: 100vw;
+  height: 0;
   margin: 45px 0 0 0;
   display: flex;
   flex-direction: column;
-  text-align: right; }
+  text-align: right;
+  transition: all 1s; }
 
 #nav .burger-nav-links a {
-  opacity: 0;
-  transform: translate(200px, -15px);
+  transform: translate(200px, -30px);
   padding: 10px; }
 
 #nav .burger-nav-links.activate a {
@@ -106,6 +108,10 @@ h1 {
 
 #nav .burger-nav-links.activate a:nth-child(4) {
   animation-delay: 0.4s; }
+
+#nav .burger-nav-links.activate {
+  background: #0D1323;
+  height: 180px; }
 
 #nav li {
   color: white;
@@ -179,13 +185,9 @@ section {
   transform: translate(-50%, -50%);
   font-size: 150px; }
 
-.feed-container {
-  display: flex;
-  flex-wrap: wrap; }
-
 .feed-item {
   position: relative;
-  flex-basis: 50%;
+  max-width: 100%;
   height: 50vh; }
 
 .feed-item .name {

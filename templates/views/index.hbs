@@ -2,7 +2,6 @@
 
    <section id="header">
       <div class="scroll-arrow">
-         v
       </div>
    </section>
 
@@ -19,8 +18,8 @@
          </span>
       </div>
 
-      <div class="feed-container">
          {{# each videos}}
+         <a href="player/{{slug}}">
          <div class="feed-item" style="
       background: url('{{image.secure_url}}') no-repeat center center;
       -webkit-background-size: cover;
@@ -30,8 +29,8 @@
       ">
             <span class="name">{{title}}</span>
          </div>
+         </a>
          {{/each}}
-      </div>
    </section>
 
    <section id="collaborators">
