@@ -1,19 +1,19 @@
 <div class="music-text">
-   <div class="heading">
-      Sessions
-   </div>
+      <div class="heading">
+            Sessions
+      </div>
 </div>
 
 <div class="feed-container">
-   {{# each videos}}
-   <div class="feed-item" style="
-         background: url('{{image.secure_url}}') no-repeat center center;
-         -webkit-background-size: cover;
-	      -moz-background-size: cover;
-	      -o-background-size: cover;
-	      background-size: cover;
-         ">
-      <span class="name">{{title}}</span>
-   </div>
-   {{/each}}
+      {{# each videos}}
+      <a href="/player/{{slug}}" class="feed-item" style="
+      background: url('{{image.secure_url}}') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      ">
+            <div class="name">{{title}}</div>
+      </a>
+      {{/each}}
 </div>

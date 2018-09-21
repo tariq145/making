@@ -1,5 +1,10 @@
-{{!< default}}
- <section id="header">
+{{!
+< default}} <section id="header">
+      <div class="quote-box">
+            <h1>Swag</h1>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ex amet blanditiis facere. Praesentium quasi laboriosam dolor
+            veniam atque fugiat.
+      </div>
       <div class="scroll-arrow" onclick="scroller(this)">
             <?xml version="1.0" encoding="iso-8859-1"?>
 
@@ -24,10 +29,9 @@
                         Feed
                   </div>
             </div>
-
-            {{# each videos}}
-            <a href="player/{{slug}}">
-                  <div class="feed-item" style="
+            <div class="feed-container">
+                  {{# each videos}}
+                  <a href="/player/{{slug}}" class="feed-item" style="
       background: url('{{image.secure_url}}') no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -35,9 +39,10 @@
       background-size: cover;
       ">
                         <div class="name">{{title}}</div>
-                  </div>
-            </a>
-            {{/each}}
+                  </a>
+                  {{/each}}
+            </div>
+
       </section>
 
       <section id="collaborators">

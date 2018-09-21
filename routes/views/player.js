@@ -24,6 +24,9 @@ exports = module.exports = function(req, res) {
       });
 
       main_query.exec(function(err, result){
+         if(result == null){
+            return res.status(404).send(keystone.wrapHTMLError('Sorry, no page could be found at this address (404)'));
+         }
          locals.data.main = result;
          next(err);
       });
