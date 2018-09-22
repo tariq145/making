@@ -10,7 +10,9 @@ exports = module.exports = function (req, res) {
 	locals.section = '';
 
 	var Videos = keystone.list('Music Video');
+	var Collaborators = keystone.list('Collaborator');
 	view.query('videos', Videos.model.find());
+	view.query('collaborators', Collaborators.model.find());
 
 	// Render the view
 	view.render('index');

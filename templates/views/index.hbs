@@ -18,15 +18,30 @@
       </div>
       </section>
 
-      <section id="feed">
+      <section id="collaborators">
             <div class="color-band">
                   <div></div>
                   <div></div>
                   <div></div>
             </div>
+            <div class="collab-text">
+                  <div class="small-heading">
+                        collaborators
+                  </div>
+            </div>
+            <div class="logo-container">
+                  {{#each collaborators}}
+                  <div class="collaborator" >
+                        <img src="{{image.url}}" width="300px" height="auto">
+                  </div>
+                  {{/each}}
+            </div>
+      </section>
+
+      <section id="feed">
             <div class="feed-text">
                   <div class="heading">
-                        Feed
+                        Latest
                   </div>
             </div>
             <div class="feed-container">
@@ -43,17 +58,4 @@
                   {{/each}}
             </div>
 
-      </section>
-
-      <section id="collaborators">
-            <div class="collab-text">
-                  <div class="color-band">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                  </div>
-                  <div class="small-heading">
-                        collaborators
-                  </div>
-            </div>
       </section>
