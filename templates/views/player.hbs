@@ -1,33 +1,31 @@
 <div id="Player">
 
-   <div class="video">
-      <iframe src="https://www.youtube.com/embed/NWL3cvOcrkk" frameborder="0" allowfullscreen></iframe>
-   </div>
+      <div class="video">
+            <iframe src="https://www.youtube.com/embed/NWL3cvOcrkk" frameborder="0" allowfullscreen></iframe>
 
-   <div class="description">
-      <div class="title">
-         {{data.main.title}}
+            <div class="description">
+                  <div class="title">
+                        {{data.main.title}}
+                  </div>
+                  <div class="main-description">
+                        {{data.main.description}}
+                  </div>
+            </div>
       </div>
-      <div class="main-description">
-         {{data.main.description}}
-      </div>
-   </div>
 
-   <div class="player-feed">
-         {{# each data.videos}}
+      <div class="player-feed">
+            {{# each data.videos}}
             <a href="/player/{{slug}}">
-               <div class="feed-item">
-                  <div class="feed-item" style="
+                  <div class="feed-item player-feed-item" style="
                   background: url('{{image.secure_url}}') no-repeat center center;
                   -webkit-background-size: cover;
                   -moz-background-size: cover;
                   -o-background-size: cover;
                   background-size: cover;
                   ">
-            <div class="name">{{title}}</div>
-         </div>
-               </div>
+                        <div class="name">{{title}}</div>
+                  </div>
             </a>
-         {{/each}}
-   </div>
+            {{/each}}
+      </div>
 </div>

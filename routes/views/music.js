@@ -6,6 +6,7 @@ exports = module.exports = function(req, res) {
 
    // Set locals
    locals.section = 'music';
+   locals.page = 'Music Videos'
 
    // Load Video
    var Videos = keystone.list('Music Video');
@@ -26,5 +27,5 @@ exports = module.exports = function(req, res) {
    // });
 
    // Render View
-   view.render('music');
+   view.render('videos');
 };

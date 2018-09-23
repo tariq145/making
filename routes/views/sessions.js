@@ -7,15 +7,12 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'sessions';
-	locals.filters = {
-		post: req.params.post,
-	};
-
+	locals.page = 'sessions'
 	 // Load Video
 	 var Sessions = keystone.list('Session');
    
 	 view.query('videos', Sessions.model.find())
 
 	// Render the view
-	view.render('sessions');
+	view.render('videos');
 };
