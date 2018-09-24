@@ -26,11 +26,39 @@ function burgerToggle(el) {
 }
 
 function scroller(el) {
-   console.log('swag');
    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
    window.scrollTo({
       top: h-60,
       left: 0,
       behavior: 'smooth'
-   })
+   });
 }
+
+let isScrolled = function (el){
+   let rect = el.getBoundingClientRect()
+   let elTop = rect.top;
+   let isVisible = elTop - window.innerHeight <= 0;
+
+   return isVisible;
+}
+
+document.addEventListener('scroll', function(){
+   let collab = document.getElementsByClassName('logo-container')[0];
+
+   let feed = document.getElementsByClassName('feed-container')[0];
+
+   let collabIS = false;
+   let feedIS = false;
+
+   if(isScrolled(collab) && !collabIS){
+      console.log('inview');
+      collab.classList.add('scrolled');
+      collabIS = true;
+   }
+   if(isScrolled(feed) && !feedIS){
+      feed.classList.add('scrolled');
+      feedIS = true;
+   }
+
+});
+

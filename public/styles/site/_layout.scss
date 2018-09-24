@@ -212,12 +212,16 @@ section {
 }
 
 .color-band {
+	position: absolute;
+	bottom: -10px;
+	height: 10px;
+	width: 100%;
 	display: flex;
 }
 
 .color-band div {
-	width: 33.3%;
-	height: 10px;
+	width: 33.333%;
+	height: 100%;
 	background: #E16991;
 }
 .color-band div:first-child {
@@ -238,7 +242,6 @@ section {
 }
 
 #feed {
-	padding: 150px 0 0 0;
 }
 
 .feed-text {
@@ -247,10 +250,11 @@ section {
 }
 
 .heading {
+	animation: fadeInFromTopHeading 1s forwards;
+	transform: translate(-50%, 0);
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	transform: translate(-50%, 0);
 	font-family: font_bold;
 	color: #E2CC00;
 	font-size: 5em;
@@ -264,6 +268,18 @@ section {
 .feed-container {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.feed-container a{
+	opacity: 0;
+}
+.feed-container.scrolled a{
+	animation: seqInFI 1s forwards;
+	@for $i from 1 through 8 {
+		&:nth-child(#{$i}) {
+			 animation-delay: $i * 0.2s; 
+		}
+  }
 }
 
 .feed-item {
@@ -294,32 +310,51 @@ section {
 
 #collaborators {
 	text-align: center;
+	width: 100%;
 }
 .collab-text {
 	position: relative;
-	padding: 0 0 30px 0;
+	padding: 70px 0;
+	//animation: fadeInFromTop 2s forwards;
 }
+
 
 .collaborator {
 	flex-basis: 33.3%;
+	padding: 50px 10px;
 }
 
 .collaborator img {
 	width: 100px;
-	opacity: 0.8;
+	opacity: 1;
 	height: auto;
 }
 
 .logo-container {
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
+	padding-bottom: 80px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
 	@media screen and (min-width: 1050px) {
-		width: 35%;
+		width: 40%;
 	}
+}
+
+.logo-container div {
+	opacity: 0;
+	
+}
+
+.logo-container.scrolled div {
+	animation: seqIn 0.7s forwards;
+	@for $i from 1 through 10 {
+		&:nth-child(#{$i}) {
+			animation-delay: $i * 0.25s
+		}
+  }
 }
 
 .music-text{

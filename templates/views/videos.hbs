@@ -5,19 +5,19 @@
 </div>
 
 {{#if videos}}
-<div class="feed-container">
-      {{# each videos}}
-      <a href="/player/{{slug}}" class="feed-item" style="
+ <div class="feed-container">
+                  {{# each videos}}
+                  <a href="/player/{{slug}}" class="feed-item" style="
       background: url('{{image.secure_url}}') no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       ">
-            <div class="name">{{title}}</div>
-      </a>
-      {{/each}}
-</div>
+                        <div class="name">{{title}}</div>
+                  </a>
+                  {{/each}}
+            </div>
 {{else}}
 <div class="no-content" style="width: 100%; text-align:center">
    <h1 >No content.</h1>
