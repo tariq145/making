@@ -51,7 +51,6 @@ document.addEventListener('scroll', function(){
    let feedIS = false;
 
    if(isScrolled(collab) && !collabIS){
-      console.log('inview');
       collab.classList.add('scrolled');
       collabIS = true;
    }
