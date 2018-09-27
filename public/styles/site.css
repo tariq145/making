@@ -371,19 +371,20 @@ section {
 #collaborators {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center; }
 
 .collab-text {
   color: white;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: bold;
   padding: 10px;
   flex-basis: 10%;
   text-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4); }
 
 .logo-container {
-  flex-basis: 70%;
+  flex-basis: 100%;
   display: flex; }
   @media screen and (min-width: 1050px) {
     .logo-container {
@@ -576,49 +577,47 @@ section {
 
 footer {
   width: 100%;
-  margin-bottom: 50px;
   background: #0D1323;
   color: white; }
 
 .foot-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   height: 100%;
   margin: 0 auto; }
   @media screen and (min-width: 1050px) {
     .foot-container {
       width: 50%; } }
 
+.foot-container .logo {
+  font-size: 25px;
+  padding-top: 30px;
+  text-align: center; }
+
 .foot-container ul {
   text-align: center;
-  flex-basis: 100%;
   margin: 0;
-  padding: 10px;
-  list-style-type: none; }
-  @media screen and (min-width: 1050px) {
-    .foot-container ul {
-      text-align: start; } }
+  flex-basis: 50%;
+  padding: 15px 0;
+  list-style-type: none;
+  border-bottom: 1px solid #090d18; }
 
 .foot-container li {
+  display: inline-block;
   font-size: 12px;
-  padding: 10px 0; }
+  padding: 0 10px; }
   .foot-container li a {
     text-decoration: none;
-    color: white; }
+    color: grey; }
 
 .foot-social {
+  padding-bottom: 15px;
   text-align: center;
-  padding: 10px;
   flex-basis: 50%; }
 
 .legend {
-  position: absolute;
-  bottom: 0;
-  height: 10px;
-  width: 100%;
   padding: 20px 0;
   text-align: center;
   font-size: 12px;
-  font-weight: bold;
   color: grey; }
