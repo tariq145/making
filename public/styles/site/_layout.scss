@@ -20,6 +20,10 @@ body,{
 	text-transform: uppercase;
 }
 
+div#body {
+	height: 200%;
+}
+
 h1 {
 	padding: 0;
 	margin: 0;
@@ -36,7 +40,14 @@ a:visited {
 	height: 62px;
 	overflow: hidden;
 	-webkit-transition: background .3s, height .3s ; 
-	transition: background .6s, height .3s ;
+	transition: background .6s, height .3s, box-shadow 0.5s ;
+
+}
+
+#nav.scrolling {
+	background: #0D1323;
+	height: 60px;
+	box-shadow: 0px 1px 20px 5px rgba(0, 0, 0, 0.4);
 }
 
 #nav ul {
@@ -198,23 +209,49 @@ section {
 }
 
 .scroll-arrow{
-	cursor: pointer;
 	position: absolute;
 	margin-right: -50%;
-	bottom: 0;
+	bottom: 40px;
 	left: 50%;
 	transform: translate(-50%, 0);
+	
 	svg {
-		:hover{
-			fill: #fff;
+		width: 70px;
+		height: 70px;
+		path{
+			cursor: pointer;
+			transition: fill 0.5s ease;
+			fill: black;
+			&:hover{
+				fill: #fff;
+			}
+		}
+	}
+}
+
+.icon svg circle{
+	&:nth-child(1){
+		fill:#D22215;
+		&:hover{
+
+		}
+	}
+	&:nth-child(2){
+		fill:#A81411;
+		&:hover{
+			fill:#D22215
+		}
+	}
+	&:nth-child(3){
+		fill:#D1D1D1;
+		&:hover{
+
 		}
 	}
 }
 
 .color-band {
-	position: absolute;
-	bottom: -10px;
-	height: 10px;
+	height: 9px;
 	width: 100%;
 	display: flex;
 }
@@ -265,6 +302,32 @@ section {
 	}
 
 }
+
+.social-icons {
+	display: flex;
+	position: absolute;
+	min-width: 200px;
+	height: 50px;
+	border:1px solid black;
+	bottom: 0;
+	right: 0;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.social-icons .icon{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: black;
+	transition: background 0.8s;
+	&:hover{
+		background: white;
+	}
+}
+
+
+
 .feed-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -309,52 +372,34 @@ section {
 }
 
 #collaborators {
+	background: #D9DBD8;
 	text-align: center;
 	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 .collab-text {
-	position: relative;
-	padding: 70px 0;
-	//animation: fadeInFromTop 2s forwards;
-}
-
-
-.collaborator {
-	flex-basis: 33.3%;
-	padding: 50px 10px;
-}
-
-.collaborator img {
-	width: 100px;
-	opacity: 1;
-	height: auto;
+	font-size: 20px;
+	flex-basis: 30%;
+	color: black;
 }
 
 .logo-container {
-	width: 90%;
-	margin: 0 auto;
-	padding-bottom: 80px;
+	flex-basis: 70%;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
 	@media screen and (min-width: 1050px) {
 		width: 40%;
 	}
 }
 
-.logo-container div {
-	opacity: 0;
-	
+.collaborator {
+	padding: 0 20px ;
 }
 
-.logo-container.scrolled div {
-	animation: seqIn 0.7s forwards;
-	@for $i from 1 through 10 {
-		&:nth-child(#{$i}) {
-			animation-delay: $i * 0.25s
-		}
-  }
+.collaborator img {
+	width: 30px;
+	height: auto;
 }
 
 .music-text{
@@ -568,10 +613,9 @@ section {
 	}
 }
 
-#footer {
-	bottom: 0;
+footer {
 	background: #0D1323;
 	height: 250px;
-	padding: 50px;
+	padding: 20px 50px;
 	color: white;
 }

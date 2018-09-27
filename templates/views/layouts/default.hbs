@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<div id='nav' >
+	<div id='nav'>
 		<a href="/"><img class='logo' src="/images/logo.png" width="350px" height="auto "></a>
 		<ul id="nav-list">
 			{{# each navLinks}}
@@ -46,9 +46,22 @@
 		{{{body}}}
 	</div>
 
-	<div id="footer">
+	<footer>
 		THIS IS THE GODDAMN Footer
-	</div>
+	</footer>
+	<section id="collaborators">
+
+		<div class="collab-text">
+			collaborators
+		</div>
+		<div class="logo-container">
+			{{#each collaborators}}
+			<div class="collaborator">
+				<img src="{{image.url}}" width="300px" height="auto">
+			</div>
+			{{/each}}
+		</div>
+	</section>
 
 	<script src="/js/functions.js"></script>
 </body>
