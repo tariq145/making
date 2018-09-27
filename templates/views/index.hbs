@@ -1,16 +1,16 @@
 {{!
 < default}} <section id="header">
       <div class="quote-box">
-                  <span class="title">Swag</span>
+            <span class="title">Swag</span>
 
-                  <div class="quote">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ex amet blanditiis facere. Praesentium quasi laboriosam dolor
-                        veniam atque fugiat.
-                  </div>
-                  <div class="author">
-                        -Unknown.
-                  </div>
+            <div class="quote">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ex amet blanditiis facere. Praesentium quasi laboriosam dolor
+                  veniam atque fugiat.
             </div>
+            <div class="author">
+                  -Unknown.
+            </div>
+      </div>
       <div onclick="scroller(this);" class="scroll-arrow">
             <svg viewBox="0 0 129 129" enable-background="new 0 0 129 129">
                   <g>
@@ -44,16 +44,28 @@
 
       </section>
 
-
-      <section id="collaborators">
-            <div class="collab-text">
-                  collaborators
-            </div>
-            <div class="logo-container">
-                  {{#each collaborators}}
-                  <div class="collaborator">
-                        <img src="{{image.url}}" width="300px" height="auto">
+      <footer>
+            <div class="foot-container">
+                  <ul>
+                        <li><a href="/about">about</a></li>
+                        <li><a href="/contact">contact</a></li>
+                        <li><a href="/music">music</a></li>
+                  </ul>
+                  <div class="foot-social">
+                        Social icons
                   </div>
-                  {{/each}}
+                  <div id="collaborators">
+                        <div class="collab-text">
+                              collaborators
+                        </div>
+                        <div class="logo-container">
+                              {{#each collaborators}}
+                              <div class="collaborator">
+                                    <img src="{{image.url}}" width="300px" height="auto">
+                              </div>
+                              {{/each}}
+                        </div>
+                  </div>
+
             </div>
-      </section>
+      </footer>

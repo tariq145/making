@@ -398,15 +398,14 @@ section {
 }
 
 #collaborators {
-	background: #D9DBD8;
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 }
 .collab-text {
-	color: grey;
-	font-size: 20px;
+	color: white;
+	font-size: 15px;
 	font-weight: bold;
 	padding: 10px;
 	flex-basis: 10%;
@@ -496,7 +495,7 @@ section {
 
 #Contact {
 	max-width: 100%;
-	padding: 90px 0;
+	padding: 90px 0 0 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -642,39 +641,54 @@ section {
 }
 
 footer {
-	position: absolute;
-	bottom: -250px;
 	width: 100%;
+	margin-bottom: 50px;
 	background: #0D1323;
-	height: 250px;
 	color: white;
 }
 
 .foot-container {
 	display: flex;
 	flex-direction: column;
-	width: 70%;
+	width: 100%;
 	height: 100%;
 	margin: 0 auto;
+	@media screen and (min-width: 1050px) {
+		width: 50%;
+	}
 }
 
 .foot-container ul{
+	text-align: center;
 	flex-basis: 100%;
 	margin: 0;
 	padding: 10px;
 	list-style-type: none;
+	@media screen and (min-width: 1050px){
+		text-align: start;
+	}
 }
 
 .foot-container li {
+	font-size: 12px;
 	padding: 10px 0;
+
+	a{
+		text-decoration: none;
+		color:white;
+	}
 }
 
 .foot-social {
+	text-align: center;
 	padding: 10px;
-	flex-basis: 70%;
+	flex-basis: 50%;
 }
 
 .legend {
+	position: absolute;
+	bottom: 0;
+	height: 10px;
 	width: 100%;
 	padding: 20px 0;
 	text-align: center;
