@@ -26,6 +26,12 @@
     transform: translate(-50%, 0);
     opacity: 1; } }
 
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 @font-face {
   font-family: font_med;
   src: url("/fonts/helvetica_neue/thin.ttf"); }
@@ -402,36 +408,27 @@ section {
   position: relative;
   height: 300px; }
 
-#Makers {
-  display: flex;
-  flex-direction: column; }
-
 #About {
-  flex-basis: 100%;
-  padding: 150px 0;
+  padding-top: 65px;
+  width: 100%;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  animation: fade 1.5s forwards; }
 
 #About .container {
-  width: 60%; }
-  @media screen and (min-width: 1050px) {
-    #About .container {
-      width: 40%; } }
+  width: 40%; }
+
+#About .social {
+  text-align: center;
+  padding: 20px; }
 
 .small-heading {
   font-size: 2em;
   font-family: font_bold;
   color: #E2CC00;
   padding: 10px 0; }
-
-#About .social {
-  width: 50%;
-  height: 20px;
-  margin: 20px 0 0 0;
-  display: flex;
-  justify-content: space-around; }
 
 .social .social-text {
   color: grey;
@@ -454,20 +451,28 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  animation: fade 1.5s forwards; }
 
 #Contact .form {
   width: 90%;
   margin: 0 auto; }
   @media only screen and (min-width: 1050px) {
     #Contact .form {
-      width: 70%; } }
+      width: 70%;
+      text-align: center; } }
 
 #Contact label {
+  color: #E2CC00;
   font-size: 22px; }
+  @media only screen and (min-width: 1050px) {
+    #Contact label {
+      padding-bottom: 40px; } }
 
 #Contact input, select {
+  color: grey;
   width: 97%;
+  box-sizing: border-box;
   padding: 10px;
   font-family: font_thin;
   letter-spacing: 1px; }
@@ -484,7 +489,7 @@ section {
   letter-spacing: 1px; }
   @media only screen and (min-width: 1050px) {
     #Contact textarea {
-      width: 80%;
+      width: 58%;
       height: 250px; } }
 
 #Contact button {
@@ -501,7 +506,7 @@ section {
   transition: background 0.3s, color 1s; }
   @media only screen and (min-width: 1050px) {
     #Contact button {
-      width: 82%; } }
+      width: 60%; } }
 
 #Contact button:hover {
   background: #D9DBD8;

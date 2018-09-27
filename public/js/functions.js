@@ -33,9 +33,9 @@ function scroller(el) {
 }
 
 let isScrolled = function (el){
+   if(!el) return false;
    let rect = el.getBoundingClientRect()
    let elTop = rect.top;
-   console.log(elTop - window.innerHeight);
    let isVisible = elTop - window.innerHeight <= 0;
 
    return isVisible;
@@ -43,7 +43,6 @@ let isScrolled = function (el){
 
 document.addEventListener('scroll', function(){
    let feed = document.getElementsByClassName('feed-container')[0];
-
    let feedIS = false;
 
    if(isScrolled(feed) && !feedIS){
