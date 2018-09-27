@@ -15,6 +15,8 @@ html,
 body,{
 	font-family: font_thin;
 	background: #D9DBD8;
+	position: relative;
+	min-height: 100.1vh;
 	padding: 0;
 	margin: 0;
 	text-transform: uppercase;
@@ -45,6 +47,7 @@ a:visited {
 }
 
 #nav.scrolling {
+	padding: 0;
 	background: #0D1323;
 	height: 60px;
 	box-shadow: 0px 1px 20px 5px rgba(0, 0, 0, 0.4);
@@ -67,7 +70,7 @@ a:visited {
 	position: fixed;
 	right: 0;
 	top: 0;
-	text-shadow:0px 0px 2px black;
+	text-shadow:0px 0px 2px  rgba(0, 0, 0, 0.4);
 	@media only screen and (max-width: 1050px) {
 		display: block;
 	}
@@ -200,8 +203,30 @@ section {
 	transform: translate(-50%,-50%);
 	width: 70%;
 	height: 50%;
-	border: 1px solid white;
 	transition: opacity 0.7s;
+}
+
+.quote-box .title{
+	font-size: 35px;
+	font-weight: bold;
+	width: 100%;
+	border-bottom: 10px solid #E2CC00;
+	margin: 100px 0 10px 150px;
+}
+
+.quote {
+	font-family: font_med;
+	font-size: 20;
+	margin: 10px 0 10px 150px;
+	width: 50%;
+	@media screen and (min-width: 1050px) {
+		width: 30%;
+	}
+}
+
+.quote-box .author {
+	margin: 0 150px;
+	font-weight: bold;
 }
 
 .quote-box:hover {
@@ -210,8 +235,9 @@ section {
 
 .scroll-arrow{
 	position: absolute;
+	width: 50px;
 	margin-right: -50%;
-	bottom: 40px;
+	bottom: 0px;
 	left: 50%;
 	transform: translate(-50%, 0);
 	
@@ -275,7 +301,7 @@ section {
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
- 	 background-size: cover;
+	  background-size: cover;
 }
 
 #feed {
@@ -373,16 +399,18 @@ section {
 
 #collaborators {
 	background: #D9DBD8;
-	text-align: center;
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 }
 .collab-text {
+	color: grey;
 	font-size: 20px;
-	flex-basis: 30%;
-	color: black;
+	font-weight: bold;
+	padding: 10px;
+	flex-basis: 10%;
+	text-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4)
 }
 
 .logo-container {
@@ -398,7 +426,8 @@ section {
 }
 
 .collaborator img {
-	width: 30px;
+	padding: 10px;
+	width: 50px;
 	height: auto;
 }
 
@@ -467,7 +496,7 @@ section {
 
 #Contact {
 	max-width: 100%;
-	padding: 150px 0 50px 0;
+	padding: 90px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -496,7 +525,6 @@ section {
 	}
 }
 
-
 #Contact textarea {
 	width: 97%;
 	height: 200px;
@@ -506,14 +534,14 @@ section {
 	letter-spacing: 1px;
 	@media only screen and (min-width: 1050px) {
 		width: 80%;
-		height: 400px;
+		height: 250px;
 	}
 }
 
 #Contact button {
 	cursor: pointer;
 	padding: 10px;
-	width: 99%;
+	width: 102%;
 	font-family: font_thin;
 	font-size: 20px;
 	letter-spacing: 1px;
@@ -523,7 +551,7 @@ section {
 	border: 2px solid #DA3231;
 	transition: background 0.3s, color 1s;
 	@media only screen and (min-width: 1050px) {
-		width: 83%;
+		width: 82%;
 	}
 }
 
@@ -614,8 +642,43 @@ section {
 }
 
 footer {
+	position: absolute;
+	bottom: -250px;
+	width: 100%;
 	background: #0D1323;
 	height: 250px;
-	padding: 20px 50px;
 	color: white;
+}
+
+.foot-container {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.foot-container ul{
+	flex-basis: 100%;
+	margin: 0;
+	padding: 10px;
+	list-style-type: none;
+}
+
+.foot-container li {
+	padding: 10px 0;
+}
+
+.foot-social {
+	padding: 10px;
+	flex-basis: 70%;
+}
+
+.legend {
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	color: grey;
 }
