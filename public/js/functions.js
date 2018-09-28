@@ -7,13 +7,13 @@ document.addEventListener('scroll', function (e) {
 
    if(yPos < -10) {
       nav.classList.add('scrolling');
-      navList.style.padding= '5px 18px';
-      logo.style.width = '340px';
+      navList.classList.add('scrolling');
+      logo.style.width = '200px';
 
    }else{
       nav.classList.remove('scrolling');
-      navList.style.padding= '10px 18px';
-      logo.style.width = '350px';
+      navList.classList.remove('scrolling');
+      logo.style.width = '210px';
    }
 });
 

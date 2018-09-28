@@ -5,8 +5,8 @@ exports = module.exports = function(req, res) {
    var locals = res.locals
 
    // Set locals
-   locals.section = 'music';
-   locals.page = 'Music Videos'
+   locals.section = 'our-work';
+   locals.page = 'Our Work'
 
    // Load Video
    var Videos = keystone.list('Music Video');

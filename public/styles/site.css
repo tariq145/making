@@ -81,7 +81,6 @@ a:visited {
 
 #nav ul {
   display: none;
-  padding: 10px 18px;
   margin: 5px 0 0 0;
   list-style-type: none;
   float: right;
@@ -167,6 +166,12 @@ a:visited {
   background: #0c1121;
   transition: background 0.5s; }
 
+#nav-list {
+  padding: 15px 18px; }
+
+#nav-list.scrolling {
+  padding: 10px 18px; }
+
 #nav li {
   color: white;
   display: inline-block;
@@ -175,7 +180,7 @@ a:visited {
 
 #nav a {
   text-decoration: none;
-  font-size: 21px;
+  font-size: 18px;
   color: white;
   transition: all 0.05s; }
 
@@ -192,8 +197,9 @@ a:visited {
 #nav .logo {
   position: fixed;
   z-index: 2;
-  margin-top: -20px;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  width: 200px;
+  height: auto; }
 
 section {
   position: relative; }
@@ -298,7 +304,7 @@ section {
   left: 50%;
   font-family: font_bold;
   color: #E2CC00;
-  font-size: 5em;
+  font-size: 4em;
   text-align: center;
   max-width: 100%; }
   @media only screen and (min-width: 1200px) {
@@ -403,6 +409,16 @@ section {
   padding: 10px;
   width: 50px;
   height: auto; }
+
+@media screen and (min-width: 850px) {
+  #Video .feed-item {
+    flex-basis: 50%;
+    height: 230px; } }
+
+@media screen and (min-width: 1050px) {
+  #Video .feed-item {
+    flex-basis: 25%;
+    height: 260px; } }
 
 .music-text {
   position: relative;
@@ -606,12 +622,12 @@ footer {
   flex-basis: 50%;
   padding: 15px 0;
   list-style-type: none;
-  border-bottom: 1px solid #090d18; }
+  border-top: 1px solid #090d18; }
 
 .foot-container li {
   display: inline-block;
   font-size: 12px;
-  padding: 0 10px; }
+  padding: 0 15px; }
   .foot-container li a {
     text-decoration: none;
     color: grey; }
@@ -624,5 +640,5 @@ footer {
 .legend {
   padding: 20px 0;
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
   color: grey; }
