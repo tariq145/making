@@ -16,13 +16,14 @@ exports = module.exports = function (req, res) {
 
 	var Enquiry = keystone.list('Enquiry');
 	locals.enquirySubmitted = false;
+	locals.validationErrors = {};
 
 	// On POST requests, add the Enquiry item to the database
 	view.on('post', { action: 'index' }, function (next) {
 
 		var newEnquiry = new Enquiry.model();
 		var updater = newEnquiry.getUpdateHandler(req);
-		
+
 		console.log(req.body)
 
 		updater.process(req.body, {
