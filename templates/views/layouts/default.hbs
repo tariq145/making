@@ -19,7 +19,7 @@
 
 <body>
 	<div id='nav'>
-		<a href="/"><img class='logo' src="/images/logo.png" ></a>
+		<a href="/"><img class='logo' src="/images/logo.png"></a>
 		<ul id="nav-list">
 			{{# each navLinks}}
 			<li {{#ifeq ../section key}} class='active' {{/ifeq}}>
@@ -45,10 +45,24 @@
 		<!-- The content block should contain the body of your template's content-->
 		{{{body}}}
 	</div>
-	
+
 	<script src="/js/functions.js"></script>
 </body>
 
+<footer>
+	<div class="foot-container">
+		<div class="logo"><img src="/images/logo.png" width="250px;"></div>
+		<div class="legend"> Copyright &copy;2018 Making</div>
+		<div class="foot-social">
+			Social icons
+		</div>
+		<ul>
+			<li><a href="/about">about</a></li>
+			<li><a href="/contact">contact</a></li>
+			<li><a href="/music">music</a></li>
+		</ul>
+	</div>
+</footer>
 
 
 </html>

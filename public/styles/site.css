@@ -209,33 +209,41 @@ section {
   opacity: 0;
   font-size: 20px;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   top: 50%;
   left: 50%;
   padding: 50px;
   transform: translate(-50%, -50%);
   width: 70%;
   height: 50%;
-  transition: opacity 0.7s; }
+  transition: opacity 0.7s;
+  margin-left: 10%;
+  padding-bottom: 15%; }
+  @media screen and (min-width: 1050px) {
+    .quote-box {
+      width: 50%; } }
 
 .quote-box .title {
-  font-size: 35px;
+  font-size: 22px;
   font-weight: bold;
-  width: 100%;
-  border-bottom: 10px solid #E2CC00;
-  margin: 100px 0 10px 150px; }
+  width: max-content;
+  display: inline-block;
+  border-bottom: 10px solid #E2CC00; }
 
 .quote {
   font-family: font_med;
-  font-size: 20;
-  margin: 10px 0 10px 150px;
-  width: 50%; }
+  font-size: 15px;
+  width: 70%; }
   @media screen and (min-width: 1050px) {
     .quote {
-      width: 30%; } }
+      width: 45%; } }
 
 .quote-box .author {
-  margin: 0 150px;
-  font-weight: bold; }
+  width: 100%;
+  font-weight: bold;
+  font-size: 15px; }
 
 .quote-box:hover {
   opacity: 1; }
@@ -244,7 +252,7 @@ section {
   position: absolute;
   width: 50px;
   margin-right: -50%;
-  bottom: 0px;
+  bottom: 17px;
   left: 50%;
   transform: translate(-50%, 0); }
   .scroll-arrow svg {
@@ -253,7 +261,7 @@ section {
     .scroll-arrow svg path {
       cursor: pointer;
       transition: fill 0.5s ease;
-      fill: black; }
+      fill: #0D1323; }
       .scroll-arrow svg path:hover {
         fill: #fff; }
 
@@ -274,15 +282,15 @@ section {
   display: flex; }
 
 .color-band div {
-  width: 33.333%;
+  width: 25%;
   height: 100%;
-  background: #E16991; }
-
-.color-band div:first-child {
-  background: #283D7F; }
-
-.color-band div:last-child {
-  background: #DA3231; }
+  background: #E2CC00; }
+  .color-band div:nth-child(1) {
+    background: #283D7F; }
+  .color-band div:nth-child(2) {
+    background: #E16991; }
+  .color-band div:nth-child(3) {
+    background: #DA3231; }
 
 #header {
   height: 100vh;
@@ -380,6 +388,30 @@ section {
   background: white;
   padding: 10px; }
 
+#Subscribe {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.subscribe-text {
+  font-size: 20px;
+  font-family: font_med;
+  color: #E2CC00; }
+
+#Subscribe input {
+  width: 70%;
+  height: 30px; }
+
+.subscribe-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: black; }
+
 #collaborators {
   width: 100%;
   display: flex;
@@ -434,7 +466,10 @@ section {
   animation: fade 1.5s forwards; }
 
 #About .container {
-  width: 40%; }
+  width: 80%; }
+  @media screen and (min-width: 1050px) {
+    #About .container {
+      width: 40%; } }
 
 #About .social {
   text-align: center;
@@ -597,6 +632,9 @@ section {
     height: 220px; } }
 
 footer {
+  position: absolute;
+  bottom: -230px;
+  height: 230px;
   width: 100%;
   background: #0D1323;
   color: white; }
@@ -613,7 +651,7 @@ footer {
 
 .foot-container .logo {
   font-size: 25px;
-  padding-top: 30px;
+  padding-top: 15px;
   text-align: center; }
 
 .foot-container ul {
@@ -638,7 +676,7 @@ footer {
   flex-basis: 50%; }
 
 .legend {
-  padding: 20px 0;
+  padding: 5px 0 20px 0;
   text-align: center;
   font-size: 10px;
   color: grey; }
