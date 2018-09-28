@@ -721,13 +721,9 @@ footer {
 
 .foot-container {
 	display: flex;
-	flex-direction: column;
-	width: 80%;
+	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-	@media screen and (min-width: 1050px) {
-		width: 50%;
-	}
 }
 
 .foot-container .logo {
