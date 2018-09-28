@@ -415,44 +415,6 @@ section {
 	padding: 10px;
 }
 
-#Subscribe {
-	width: 100%;
-	height: 200px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-
-.subscribe-text {
-	font-size: 20px;
-	font-family: font_med;
-	color: #E2CC00;
-}
-
-#Subscribe form {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-#Subscribe input {
-	margin: 0 auto;
-	width: 70%;
-	height: 30px;
-	@media screen and (min-width: 1050px){
-		width: 30%;
-	}
-}
-
-.subscribe-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	background: black;
-}
-
 #collaborators {
 	width: 100%;
 	display: flex;
@@ -712,39 +674,53 @@ section {
 
 footer {
 	position: absolute;
-	bottom: -230px;
-	height: 230px;;
 	width: 100%;
+	bottom: -230px;
+	min-height: 230px;
 	background: #0D1323;
 	color: white;
 }
 
 .foot-container {
 	display: flex;
+	flex-direction: column;
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
+	@media screen and (min-width: 1050px) {
+		flex-direction: row-reverse;
+	}
+}
+
+
+.foot-container>div {
+	flex-basis: 33.33%;
+	min-height: 70px;
 }
 
 .foot-container .logo {
 	font-size: 25px;
-	padding-top: 15px;
 	text-align: center;
+	@media screen and (min-width:1050px) {
+		position: absolute;
+		bottom: 0;
+	}
 }
 
 .foot-container ul{
-	text-align: center;
+	padding: 15px;
 	margin: 0;
-	flex-basis: 50%;
-	padding: 15px 0;
 	list-style-type: none;
-	border-top: 1px solid rgb(9, 13, 24);
+	text-align: center;
+	@media screen and (min-width: 1050px ) {
+		text-align: start;
+	}
 }
 
 .foot-container li {
-	display: inline-block;
+	padding: 10px 0;
+	display: block;
 	font-size: 12px;
-	padding: 0 15px;
 	a{
 		text-decoration: none;
 		color:grey;
@@ -752,14 +728,58 @@ footer {
 }
 
 .foot-social {
-	padding-bottom: 15px;
+	padding-top: 70px;
 	text-align: center;
-	flex-basis: 50%;
+	@media screen and (min-width: 1050px ) {
+		padding-top: 120px;
+	}
 }
 
 .legend {
-	padding: 5px 0 20px 0;
+	padding: 30px;
 	text-align: center;
 	font-size: 10px;
 	color: grey;
+	border-bottom: 1px solid rgba(5, 8, 19, 0.32);	
+	@media screen and (min-width: 1050px ) {
+		border: none;
+		padding: 65px 0 0 0;
+	}
+}
+
+
+.subscribe {
+	padding-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	@media screen and (min-width: 1050px){
+		padding-top: 100px;
+	}
+}
+
+.subscribe-text {
+	text-align: left;
+	font-size: 14px;
+	padding: 10px 0;
+	font-family: font_med;
+	color: grey;
+}
+
+.subscribe input {
+	margin: 0 auto;
+	width: 250px;
+	height: 20px;
+	@media screen and (min-width: 1050px){
+		width: 250px;
+	}
+}
+
+.subscribe-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: black;
 }
