@@ -401,9 +401,18 @@ section {
   font-family: font_med;
   color: #E2CC00; }
 
+#Subscribe form {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
 #Subscribe input {
+  margin: 0 auto;
   width: 70%;
   height: 30px; }
+  @media screen and (min-width: 1050px) {
+    #Subscribe input {
+      width: 30%; } }
 
 .subscribe-back {
   position: absolute;
