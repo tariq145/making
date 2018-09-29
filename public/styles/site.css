@@ -327,7 +327,7 @@ section {
   margin: 0 auto; }
   @media only screen and (min-width: 1200px) {
     .heading-text {
-      bottom: 70px; } }
+      width: 40%; } }
 
 .social-icons {
   display: flex;
@@ -440,7 +440,7 @@ section {
 
 .music-text {
   position: relative;
-  height: 100px;
+  min-height: 100px;
   padding-top: calc(11vh + 50px);
   padding-bottom: 20px; }
 

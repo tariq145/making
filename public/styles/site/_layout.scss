@@ -355,7 +355,7 @@ section {
 	width: 80%;
 	margin: 0 auto;
 	@media only screen and (min-width: 1200px) {
-		bottom: 70px;
+		width: 40%;
 	}
 
 }
@@ -476,7 +476,7 @@ section {
 
 .music-text{
 	position: relative;
-	height: 100px;
+	min-height: 100px;
 	padding-top: calc(11vh + 50px);
 	padding-bottom: 20px;
 }
