@@ -450,12 +450,12 @@ section {
   padding-bottom: 20px; }
 
 #About {
-  padding-top: 65px;
   width: 100%;
-  height: 700px;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: calc( 7vh + 80px);
   animation: fade 1.5s forwards; }
 
 #About .container {
@@ -468,11 +468,9 @@ section {
   text-align: center;
   padding: 20px; }
 
-.small-heading {
-  font-size: 2em;
-  font-family: font_bold;
-  color: #E2CC00;
-  padding: 10px 0; }
+#About .text {
+  margin-top: 20px;
+  text-align: center; }
 
 .social .social-text {
   color: grey;
@@ -650,11 +648,32 @@ footer {
   margin: 0 auto; }
   @media screen and (min-width: 1050px) {
     .foot-container {
-      flex-direction: row-reverse; } }
+      flex-direction: row; } }
+
+.foot-first {
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  @media screen and (min-width: 1050px) {
+    .foot-first {
+      order: 3; } }
+
+.foot-second {
+  order: 1; }
+  @media screen and (min-width: 1050px) {
+    .foot-second {
+      order: 2; } }
+
+.foot-third {
+  border-top: 1px solid rgba(5, 8, 19, 0.32);
+  order: 3; }
+  @media screen and (min-width: 1050px) {
+    .foot-third {
+      order: 1; } }
 
 .foot-container > div {
-  flex-basis: 33.33%;
-  align-items: center; }
+  flex-basis: 33.33%; }
 
 .foot-container .logo {
   font-size: 25px;
@@ -684,20 +703,12 @@ footer {
 
 .foot-social {
   text-align: center; }
-  @media screen and (min-width: 1050px) {
-    .foot-social {
-      padding-top: 65px; } }
 
 .legend {
   padding: 20px;
   text-align: center;
   font-size: 10px;
-  color: grey;
-  border-bottom: 1px solid rgba(5, 8, 19, 0.32); }
-  @media screen and (min-width: 1050px) {
-    .legend {
-      border: none;
-      padding: 55px 0 0 0; } }
+  color: grey; }
 
 .subscribe {
   padding-top: 50px;
