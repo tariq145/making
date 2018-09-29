@@ -184,8 +184,9 @@ a:visited {
 }
 
 #nav .active a{
+	animation: fadeColor 0.5s forwards;
 	transition: color 1s;
-	color: #E2CC00;
+	color: white;
 }
 
 #nav .logo {

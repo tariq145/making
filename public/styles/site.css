@@ -32,6 +32,10 @@
   100% {
     opacity: 1; } }
 
+@keyframes fadeColor {
+  100% {
+    color: #E2CC00; } }
+
 @font-face {
   font-family: font_med;
   src: url("/fonts/helvetica_neue/thin.ttf"); }
@@ -191,8 +195,9 @@ a:visited {
   transform: scale(1.05); }
 
 #nav .active a {
+  animation: fadeColor 0.5s forwards;
   transition: color 1s;
-  color: #E2CC00; }
+  color: white; }
 
 #nav .logo {
   position: fixed;
