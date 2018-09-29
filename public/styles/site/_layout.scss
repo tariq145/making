@@ -339,7 +339,7 @@ section {
 	animation: fadeInFromTop 1s forwards;
 	font-family: font_bold;
 	color: #E2CC00;
-	font-size: 3em;
+	font-size: 2.5em;
 	text-align: center;
 	@media only screen and (min-width: 1200px) {
 		bottom: 70px;
@@ -478,7 +478,7 @@ section {
 .music-text{
 	position: relative;
 	min-height: 100px;
-	padding-top: calc(11vh + 50px);
+	padding-top: calc(5vh + 50px);
 	padding-bottom: 20px;
 }
 
@@ -700,20 +700,20 @@ section {
 footer {
 	position: absolute;
 	width: 100%;
-	bottom: -650px;
-	height: 650px;
+	bottom: -450px;
+	height: 450px;
 	background: #0D1323;
 	color: white;
 	@media screen and (min-width: 1050px) {
-		bottom: -230px;
-		height: 230px;
+		bottom: -170px;
+		height: 170px;
 	}
 }
 
 .foot-container {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	width: 90%;
 	height: 100%;
 	margin: 0 auto;
 	@media screen and (min-width: 1050px) {
@@ -724,7 +724,7 @@ footer {
 
 .foot-container>div {
 	flex-basis: 33.33%;
-	min-height: 70px;
+	align-items: center;
 }
 
 .foot-container .logo {
@@ -737,12 +737,13 @@ footer {
 }
 
 .foot-container ul{
-	padding: 15px;
+	padding: 0;
 	margin: 0;
 	list-style-type: none;
 	text-align: center;
 	@media screen and (min-width: 1050px ) {
 		text-align: start;
+		padding: 15px;
 	}
 }
 
@@ -757,22 +758,21 @@ footer {
 }
 
 .foot-social {
-	padding-top: 70px;
 	text-align: center;
 	@media screen and (min-width: 1050px ) {
-		padding-top: 120px;
+		padding-top: 65px;
 	}
 }
 
 .legend {
-	padding: 30px;
+	padding: 20px;
 	text-align: center;
 	font-size: 10px;
 	color: grey;
 	border-bottom: 1px solid rgba(5, 8, 19, 0.32);	
 	@media screen and (min-width: 1050px ) {
 		border: none;
-		padding: 65px 0 0 0;
+		padding: 55px 0 0 0;
 	}
 }
 
@@ -784,7 +784,7 @@ footer {
 	align-items: center;
 	flex-direction: column;
 	@media screen and (min-width: 1050px){
-		padding-top: 100px;
+		padding-top: 40px;
 	}
 }
 
