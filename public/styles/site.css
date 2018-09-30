@@ -58,8 +58,8 @@ body {
   margin: 0;
   text-transform: uppercase; }
 
-div#body {
-  height: 200%; }
+div#body > div {
+  height: 100vh; }
 
 h1 {
   padding: 0;
@@ -318,9 +318,6 @@ section {
   color: #E2CC00;
   font-size: 2.5em;
   text-align: center; }
-  @media only screen and (min-width: 1200px) {
-    .heading {
-      bottom: 70px; } }
 
 .heading-text {
   animation: fade 4s forwards;
@@ -433,6 +430,9 @@ section {
   width: 50px;
   height: auto; }
 
+#Video .feed-container {
+  margin-top: 50px; }
+
 @media screen and (min-width: 850px) {
   #Video .feed-item {
     flex-basis: 50%;
@@ -443,34 +443,22 @@ section {
     flex-basis: 25%;
     height: 260px; } }
 
-.music-text {
-  position: relative;
-  min-height: 100px;
-  padding-top: calc(5vh + 50px);
-  padding-bottom: 20px; }
-
 #About {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: calc( 7vh + 80px);
   animation: fade 1.5s forwards; }
-
-#About .container {
-  width: 80%; }
-  @media screen and (min-width: 1050px) {
-    #About .container {
-      width: 40%; } }
 
 #About .social {
   text-align: center;
   padding: 20px; }
 
 #About .text {
-  margin-top: 20px;
-  text-align: center; }
+  text-align: center;
+  width: 80%;
+  margin: 10px auto; }
+  @media screen and (min-width: 1050px) {
+    #About .text {
+      width: 40%; } }
 
 .social .social-text {
   color: grey;
@@ -488,12 +476,7 @@ section {
   transform: scale(1.1); }
 
 #Contact {
-  max-width: 100%;
-  padding: 90px 0 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 100%;
   animation: fade 1.5s forwards; }
 
 #Contact .form {
@@ -505,50 +488,61 @@ section {
       text-align: center; } }
 
 #Contact label {
-  color: #E2CC00;
-  font-size: 22px; }
-  @media only screen and (min-width: 1050px) {
-    #Contact label {
-      padding-bottom: 40px; } }
+  font-size: 15px; }
 
 #Contact input, select {
   color: grey;
   width: 97%;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 7px;
   font-family: font_thin;
   letter-spacing: 1px; }
   @media only screen and (min-width: 1050px) {
     #Contact input, select {
-      width: 60%; } }
+      width: 95%; } }
 
 #Contact textarea {
-  width: 97%;
+  width: 93%;
   height: 200px;
-  padding: 10px;
+  padding: 7px;
   resize: none;
   font-family: font_thin;
   letter-spacing: 1px; }
+  @media only screen and (min-width: 750px) {
+    #Contact textarea {
+      width: 96%; } }
   @media only screen and (min-width: 1050px) {
     #Contact textarea {
-      width: 58%;
-      height: 250px; } }
+      width: 95%;
+      height: 180px; } }
 
 #Contact button {
   cursor: pointer;
-  padding: 10px;
-  width: 102%;
+  padding: 7px;
+  width: 97%;
   font-family: font_thin;
   font-size: 20px;
   letter-spacing: 1px;
   color: #D9DBD8;
   background: #DA3231;
-  border-radius: 4px;
-  border: 2px solid #DA3231;
+  border: 1px solid #DA3231;
   transition: background 0.3s, color 1s; }
   @media only screen and (min-width: 1050px) {
     #Contact button {
-      width: 60%; } }
+      width: 98%;
+      padding: 3px 7px; } }
+
+#Contact form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px; }
+  @media only screen and (min-width: 1050px) {
+    #Contact form {
+      flex-direction: row; } }
+
+#Contact form > div {
+  flex-basis: 50%; }
 
 #Contact button:hover {
   background: #D9DBD8;
@@ -634,7 +628,8 @@ footer {
   bottom: -450px;
   height: 450px;
   background: #0D1323;
-  color: white; }
+  color: white;
+  border-top: 1px solid #E2CC00; }
   @media screen and (min-width: 1050px) {
     footer {
       bottom: -170px;
@@ -654,10 +649,11 @@ footer {
   order: 2;
   display: flex;
   align-items: center;
-  justify-content: flex-end; }
+  justify-content: center; }
   @media screen and (min-width: 1050px) {
     .foot-first {
-      order: 3; } }
+      order: 3;
+      justify-content: flex-end; } }
 
 .foot-second {
   order: 1; }
@@ -771,3 +767,6 @@ footer {
   height: 100%;
   z-index: -1;
   background: black; }
+
+.container {
+  padding-top: calc(5vh + 70px); }

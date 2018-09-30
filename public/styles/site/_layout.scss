@@ -23,7 +23,10 @@ body,{
 }
 
 div#body {
-	height: 200%;
+}
+
+div#body>div{
+	height: 100vh;
 }
 
 h1 {
@@ -342,7 +345,6 @@ section {
 	font-size: 2.5em;
 	text-align: center;
 	@media only screen and (min-width: 1200px) {
-		bottom: 70px;
 	}
 
 }
@@ -464,7 +466,11 @@ section {
 	height: auto;
 }
 
-#Video .feed-item {
+#Video .feed-container {
+	margin-top: 50px;
+}
+
+#Video .feed-item {	
 	@media screen and (min-width: 850px){
 		flex-basis: 50%;
 		height: 230px;
@@ -475,28 +481,10 @@ section {
 	}
 } 
 
-.music-text{
-	position: relative;
-	min-height: 100px;
-	padding-top: calc(5vh + 50px);
-	padding-bottom: 20px;
-}
-
 #About {
 	width: 100%;
 	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	padding-top: calc( 7vh + 80px );
 	animation: fade 1.5s forwards;
-}
-
-#About .container {
-	width: 80%;
-	@media screen and (min-width:1050px){
-		width: 40%;
-	}
 }
 
 #About .social{
@@ -505,8 +493,12 @@ section {
 }
 
 #About .text {
-	margin-top: 20px;
 	text-align: center;
+	width: 80%;
+	margin: 10px auto;
+	@media screen and (min-width: 1050px) {
+		width: 40%;
+	}
 }
 
 
@@ -529,12 +521,7 @@ section {
 }
 
 #Contact {
-	max-width: 100%;
-	padding: 90px 0 0 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	width: 100%;
 	animation: fade 1.5s forwards;
 }
 
@@ -548,10 +535,8 @@ section {
 }
 
 #Contact label {
-	color: #E2CC00;
-	font-size: 22px;
+	font-size: 15px;
 	@media only screen and (min-width: 1050px) {
-		padding-bottom: 40px;
 	}
 }
 
@@ -559,42 +544,59 @@ section {
 	color: grey;
 	width: 97%;
 	box-sizing: border-box;
-	padding: 10px;
+	padding: 7px;
 	font-family: font_thin;
 	letter-spacing: 1px;
 	@media only screen and (min-width: 1050px) {
-		width: 60%;
+		width: 95%;
 	}
 }
 
 #Contact textarea {
-	width: 97%;
+	width: 93%;
 	height: 200px;
-	padding: 10px;
+	padding: 7px;
 	resize: none;
 	font-family: font_thin;
 	letter-spacing: 1px;
+	@media only screen and (min-width: 750px) {
+		width: 96%;
+	}
 	@media only screen and (min-width: 1050px) {
-		width: 58%;
-		height: 250px;
+		width: 95%;
+		height: 180px;
 	}
 }
 
 #Contact button {
 	cursor: pointer;
-	padding: 10px;
-	width: 102%;
+	padding: 7px;
+	width: 97%;
 	font-family: font_thin;
 	font-size: 20px;
 	letter-spacing: 1px;
 	color: #D9DBD8;
 	background:  #DA3231;
-	border-radius: 4px;
-	border: 2px solid #DA3231;
+	border: 1px solid #DA3231;
 	transition: background 0.3s, color 1s;
 	@media only screen and (min-width: 1050px) {
-		width: 60%;
+		width: 98%;
+		padding: 3px 7px;
+
 	}
+}
+
+#Contact form{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 30px;
+	@media only screen and (min-width: 1050px) {
+		flex-direction: row;
+	}
+} 
+#Contact form>div {
+	flex-basis: 50%;
 }
 
 #Contact button:hover{
@@ -698,6 +700,7 @@ footer {
 	height: 450px;
 	background: #0D1323;
 	color: white;
+	border-top: 1px solid #E2CC00;
 	@media screen and (min-width: 1050px) {
 		bottom: -170px;
 		height: 170px;
@@ -719,9 +722,10 @@ footer {
 	order: 2;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	@media screen and (min-width: 1050px ) {
 		order: 3;
+		justify-content: flex-end;
 	}
 }
 
@@ -859,4 +863,8 @@ footer {
 	height: 100%;
 	z-index: -1;
 	background: black;
+}
+
+.container {
+	padding-top: calc(5vh + 70px);
 }
