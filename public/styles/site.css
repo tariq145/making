@@ -772,13 +772,16 @@ footer {
   padding-top: calc(5vh + 70px); }
 
 .images {
-  display: flex;
   justify-content: center;
   height: 250px;
   width: 100%;
   margin: 0 auto;
   margin-top: 20px;
   overflow-x: scroll;
-  box-sizing: padding-box; }
+  box-sizing: padding-box;
+  display: none; }
+  @media screen and (min-width: 1050px) {
+    .images {
+      display: flex; } }
   .images::-webkit-scrollbar {
     display: none; }

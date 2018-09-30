@@ -870,7 +870,6 @@ footer {
 }
 
 .images {
-	display: flex;
 	justify-content: center;
 	height: 250px;
 	width: 100%;
@@ -878,6 +877,10 @@ footer {
 	margin-top: 20px;
 	overflow-x: scroll;
 	box-sizing: padding-box;
+	display: none;
+	@media screen and (min-width: 1050px) {
+		display: flex;
+	}
 	&::-webkit-scrollbar { 
 		display: none; 
 	}
