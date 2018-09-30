@@ -32,12 +32,13 @@ var routes = {
 };
 
 // Setup Route Bindings
-exports = module.exports = function (app) {
+module.exports = function (app) {
 	// Views
 	app.all('/', routes.views.index);
 	app.get('/sessions', routes.views.sessions);
 	app.get('/our-work', routes.views.music);
 	app.get('/podcast', routes.views.podcast);
+	app.get('/gallery', routes.views.gallery);
 	app.get('/about', routes.views.about);
 	app.all('/contact', routes.views.contact);
 	app.get('/player/:id', routes.views.player);
