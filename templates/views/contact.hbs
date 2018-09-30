@@ -1,6 +1,11 @@
 <div id="Contact">
 	<div class="container">
 		<div class="heading">Contact Us</div>
+		<div class="images">
+			{{#each images}}
+			<img src="{{image.url}}" alt="" height="100%;">
+			{{/each}}
+		</div>
 		<div class="form">
 			{{#if enquirySubmitted}}
 			<h3>Thanks for getting in touch.</h3>

@@ -590,7 +590,7 @@ section {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	margin-top: 30px;
+	margin-top: 10px;
 	@media only screen and (min-width: 1050px) {
 		flex-direction: row;
 	}
@@ -867,4 +867,18 @@ footer {
 
 .container {
 	padding-top: calc(5vh + 70px);
+}
+
+.images {
+	display: flex;
+	justify-content: center;
+	height: 250px;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+	overflow-x: scroll;
+	box-sizing: padding-box;
+	&::-webkit-scrollbar { 
+		display: none; 
+	}
 }
