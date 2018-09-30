@@ -58,6 +58,9 @@ body {
   margin: 0;
   text-transform: uppercase; }
 
+div#body {
+  background: #0D1323; }
+
 div#body > div {
   height: 100vh; }
 
@@ -322,7 +325,7 @@ section {
 .heading-text {
   animation: fade 4s forwards;
   font-family: font_med;
-  color: black;
+  color: white;
   font-size: 15px;
   text-align: center;
   width: 80%;
@@ -455,7 +458,8 @@ section {
 #About .text {
   text-align: center;
   width: 80%;
-  margin: 10px auto; }
+  margin: 10px auto;
+  color: white; }
   @media screen and (min-width: 1050px) {
     #About .text {
       width: 40%; } }
@@ -488,6 +492,7 @@ section {
       text-align: center; } }
 
 #Contact label {
+  color: white;
   font-size: 15px; }
 
 #Contact input, select {
@@ -701,7 +706,10 @@ footer {
   text-align: center; }
 
 .legend {
-  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   text-align: center;
   font-size: 10px;
   color: grey; }

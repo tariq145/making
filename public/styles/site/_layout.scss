@@ -23,6 +23,7 @@ body,{
 }
 
 div#body {
+	background: #0D1323;
 }
 
 div#body>div{
@@ -352,7 +353,7 @@ section {
 .heading-text {
 	animation: fade 4s forwards;
 	font-family: font_med;
-	color: black;
+	color: white;
 	font-size: 15px;
 	text-align: center;
 	width: 80%;
@@ -496,6 +497,7 @@ section {
 	text-align: center;
 	width: 80%;
 	margin: 10px auto;
+	color: white;
 	@media screen and (min-width: 1050px) {
 		width: 40%;
 	}
@@ -535,6 +537,7 @@ section {
 }
 
 #Contact label {
+	color: white;
 	font-size: 15px;
 	@media only screen and (min-width: 1050px) {
 	}
@@ -786,11 +789,13 @@ footer {
 }
 
 .legend {
-	padding: 20px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
 	text-align: center;
 	font-size: 10px;
 	color: grey;
-	
 }
 
 
