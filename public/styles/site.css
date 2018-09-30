@@ -62,7 +62,7 @@ div#body {
   background: #0D1323; }
 
 div#body > div {
-  height: 100vh; }
+  min-height: 100vh; }
 
 h1 {
   padding: 0;
