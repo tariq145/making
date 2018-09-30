@@ -594,6 +594,7 @@ section {
 	justify-content: center;
 	flex-direction: column;
 	margin-top: 10px;
+	padding-bottom: 40px; 
 	@media only screen and (min-width: 1050px) {
 		flex-direction: row;
 	}
