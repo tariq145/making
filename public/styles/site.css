@@ -138,7 +138,7 @@ a:visited {
   width: 100vw;
   height: 0;
   overflow: hidden;
-  margin: 60px 0 0 0;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -147,27 +147,14 @@ a:visited {
 #nav .burger-nav-links a {
   opacity: 0;
   border-bottom: 0.05px solid #0c1121;
-  transform: translate(0, -30px);
-  padding: 10px; }
+  padding: 20px 0; }
 
 #nav .burger-nav-links.activate a {
-  animation: seqIn 0.6s forwards; }
-
-#nav .burger-nav-links.activate a:nth-child(1) {
-  animation-delay: 0.1; }
-
-#nav .burger-nav-links.activate a:nth-child(2) {
-  animation-delay: 0.2s; }
-
-#nav .burger-nav-links.activate a:nth-child(3) {
-  animation-delay: 0.3s; }
-
-#nav .burger-nav-links.activate a:nth-child(4) {
-  animation-delay: 0.4s; }
+  animation: fade 0.6s forwards; }
 
 #nav .burger-nav-links.activate {
   background: #0D1323;
-  height: 180px; }
+  height: max-content; }
 
 #nav .burger-nav-links.activate a:hover {
   background: #0c1121;
@@ -484,60 +471,70 @@ section {
   animation: fade 1.5s forwards; }
 
 #Contact .form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 90%;
-  margin: 0 auto; }
+  margin: 20px auto; }
   @media only screen and (min-width: 1050px) {
     #Contact .form {
-      width: 70%;
-      text-align: center; } }
+      width: 60%; } }
 
-#Contact label {
+#Contact input {
   color: white;
-  font-size: 15px; }
-
-#Contact input, select {
-  color: grey;
-  width: 97%;
-  box-sizing: border-box;
-  padding: 7px;
+  background: transparent;
+  width: 95%;
+  height: 44px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  border: 1px solid #E2CC00;
   font-family: font_thin;
-  letter-spacing: 1px; }
+  outline: none;
+  transition: border 0.2s; }
+  #Contact input:focus {
+    border: 1px solid #DA3231; }
+  #Contact input::placeholder {
+    color: white;
+    font-size: 16px; }
   @media only screen and (min-width: 1050px) {
-    #Contact input, select {
-      width: 95%; } }
+    #Contact input {
+      width: 300px; } }
 
 #Contact textarea {
-  width: 93%;
-  height: 200px;
-  padding: 7px;
+  outline: none;
+  color: white;
+  background: transparent;
+  border: 1px solid #E2CC00;
+  width: 95%;
+  height: 101px;
+  padding: 10px;
   resize: none;
   font-family: font_thin;
-  letter-spacing: 1px; }
-  @media only screen and (min-width: 750px) {
-    #Contact textarea {
-      width: 96%; } }
+  transition: border 0.2s; }
+  #Contact textarea::placeholder {
+    color: white;
+    font-size: 16px; }
+  #Contact textarea:focus {
+    border: 1px solid #DA3231; }
   @media only screen and (min-width: 1050px) {
     #Contact textarea {
-      width: 95%;
-      height: 180px; } }
+      width: 300px; } }
 
 #Contact button {
   cursor: pointer;
-  padding: 7px;
-  width: 97%;
+  width: 100px;
+  padding: 10px;
   font-family: font_thin;
-  font-size: 20px;
-  letter-spacing: 1px;
   color: #D9DBD8;
-  background: #DA3231;
-  border: 1px solid #DA3231;
-  transition: background 0.3s, color 1s; }
+  background: transparent;
+  border: 1px solid #E2CC00;
+  transition: border 0.5s; }
   @media only screen and (min-width: 1050px) {
     #Contact button {
-      width: 98%;
-      padding: 3px 7px; } }
+      float: right; } }
 
 #Contact form {
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -547,15 +544,11 @@ section {
     #Contact form {
       flex-direction: row; } }
 
-#Contact form > div {
-  flex-basis: 50%; }
-
 #Contact button:hover {
-  background: #D9DBD8;
-  color: #DA3231; }
+  border: 1px solid #DA3231; }
 
 #Contact .form-group {
-  margin: 20px 0; }
+  margin: 10px 5px; }
 
 .nav-fix {
   position: absolute;
@@ -678,12 +671,12 @@ footer {
   flex-basis: 33.33%; }
 
 .foot-container .logo {
-  font-size: 25px;
-  text-align: center; }
+  display: none; }
   @media screen and (min-width: 1050px) {
     .foot-container .logo {
+      display: block;
       position: absolute;
-      bottom: 0; } }
+      bottom: 15px; } }
 
 .foot-container ul {
   padding: 0;
