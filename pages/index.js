@@ -44,7 +44,7 @@ class App extends Component {
                </div>
                <div className="logo"></div>
                <div className="center">
-                  <div className="text">Comming Soon</div>
+                  <div className="text">Coming Soon</div>
                   {/* <form action="submit" onSubmit={this.submit}>
                   <input type="text" name="email" id="email" placeholder="Email." />
                </form> 
@@ -61,7 +61,7 @@ class App extends Component {
 
                .body{
                   width: 100%;
-                  height: 95vh;
+                  height: 98vh;
                   display:flex;
                   justify-content: center;
                   align-items: center;
@@ -75,7 +75,7 @@ class App extends Component {
                .vertical-date {
                   left:0;
                   top: 0;
-                  font-size: 70px;
+                  font-size: 7vh;
                   height: 100%;
                   display: none;
                   align-items:center;
