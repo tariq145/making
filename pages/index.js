@@ -111,7 +111,7 @@ class App extends Component {
                   float:right;
                   width: 25%;
                   height: 10px;sdwag
-                  background: #283D7F;
+                  background:  #283D7F;
                }
                .band:nth-child(1){
                   background: #E2CC00;
