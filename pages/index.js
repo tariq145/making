@@ -110,8 +110,8 @@ class App extends Component {
                .band {
                   float:right;
                   width: 25%;
-                  height: 10px;sdwag
-                  background:  #283D7F;
+                  height: 10px;
+                  background: #283D7F;
                }
                .band:nth-child(1){
                   background: #E2CC00;
