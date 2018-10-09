@@ -19,7 +19,6 @@ class App extends Component {
       return (
          <div>
             <Head>
-               <meta name="google-site-verification" content="H29kFJ8MDIVL8gCklRLQCgSQ-ymolW7E_AePYTyJUTM" />
                <meta name="viewport" content="width=device-width, initial-scale=1" />
                <meta charSet="utf-8" />
             </Head>
