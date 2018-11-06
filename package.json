@@ -4,7 +4,7 @@
   "description": "The Making",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 8080",
     "build": "next build",
     "start": "next start -p 8080"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/tariq145/making#readme",
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "next": "^7.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"

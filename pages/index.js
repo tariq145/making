@@ -9,6 +9,16 @@ class App extends Component {
       arr: ['t', 's', 'a']
    }
 
+   componentDidMount() {
+      fetch('http://localhost:3000/api/people')
+         .then( response => {
+            return response.json();
+         })
+         .then ( result => {
+            this.setState({ result })
+         });
+   }
+
    submit(event) {
       event.preventDefault();
       console.log(event.target.children[0].value);
