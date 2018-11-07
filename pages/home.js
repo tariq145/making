@@ -1,9 +1,13 @@
 import { Component } from "react";
 
+import Link from "next/link";
 import Layout from "../components/Layout";
+
+import dummyData from "../static/dummy";
 
 class Home extends Component {
 
+//HANDLES CONTENT OF FEED ITEM
   showContent(e) {
     e.target.classList.add('show');
   }
@@ -13,6 +17,7 @@ class Home extends Component {
   }
 
    render() {
+
       return(
          <Layout>
             <div id="home">
@@ -20,23 +25,24 @@ class Home extends Component {
                   Recent Work
                </div>
                <div className="feed">
-                  {dummyData.map( (obj,key) => 
-                      <div className="feed-item" key={key} 
-                      >
-                        <div className="feed-item-content"
-                        onMouseEnter={this.showContent}
-                        onMouseLeave={this.hideContent}
-                        >
-                          <div className="feed-content-container">
-                            <div className="feed-item-artist">
-                              <span>{dummyData[key].artist}</span>
-                            </div>
-                            <div className="feed-item-title">
-                              <span>{dummyData[key].title}</span>
+                  {dummyData.map( (obj,key) =>
+                      <Link href={`/player?id=${key}`}>
+                        <div className="feed-item" key={key}>
+                          <div className="feed-item-content"
+                          onMouseEnter={this.showContent}
+                          onMouseLeave={this.hideContent}
+                          >
+                            <div className="feed-content-container">
+                              <div className="feed-item-artist">
+                                <span>{dummyData[key].artist}</span>
+                              </div>
+                              <div className="feed-item-title">
+                                <span>{dummyData[key].title}</span>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </Link>
                   )}
                 </div>
             </div>
@@ -58,6 +64,7 @@ class Home extends Component {
                  height: 400px;
                  background: red;
                  margin: 20px;
+                 cursor: pointer;
                }
                
                .show.feed-item-content {
@@ -88,6 +95,8 @@ class Home extends Component {
                .feed-item-title {
                  font-size: 20px;
                }
+
+               
             `}</style>
          </Layout>
       );
@@ -96,60 +105,3 @@ class Home extends Component {
 
 export default Home;
 
-
-const dummyData = [
-   {
-     title: "A title",
-     artist: "An Artist",
-     description: "This is the description",
-     type: "Type",
-     videoUrl: "Video url",
-     imgUrl: "Img url",
-     pubDate: "Pubdate",
-   },
-   {
-      title: "A title",
-      artist: "An Artist",
-      description: "This is the description",
-      type: "Type",
-      videoUrl: "Video url",
-      imgUrl: "Img url",
-      pubDate: "Pubdate",
-    },
-    {
-      title: "A title",
-      artist: "An Artist",
-      description: "This is the description",
-      type: "Type",
-      videoUrl: "Video url",
-      imgUrl: "Img url",
-      pubDate: "Pubdate",
-    },
-    {
-      title: "A title",
-      artist: "An Artist",
-      description: "This is the description",
-      type: "Type",
-      videoUrl: "Video url",
-      imgUrl: "Img url",
-      pubDate: "Pubdate",
-    },
-    {
-      title: "A title",
-      artist: "An Artist",
-      description: "This is the description",
-      type: "Type",
-      videoUrl: "Video url",
-      imgUrl: "Img url",
-      pubDate: "Pubdate",
-    },
-    {
-      title: "A title",
-      artist: "An Artist",
-      description: "This is the description",
-      type: "Type",
-      videoUrl: "Video url",
-      imgUrl: "Img url",
-      pubDate: "Pubdate",
-    },
-];
