@@ -6,12 +6,21 @@ import Layout from "../components/Layout";
 import dummyData from "../static/dummy";
 
 class Player extends Component {
+  state = {
+    video: {},
+  }
+
+  componentDidMount(){
+    this.setState({
+      video: dummyData[this.props.router.query.id],
+    })
+  }
 
   render(){
     return (
       <Layout>
-        <h1>{dummyData[this.props.router.query.id].title}</h1>
-        <p>{dummyData[this.props.router.query.id].description}</p>
+        <h1>{this.state.video.title}</h1>
+        <p>{this.state.video.description}</p>
       </Layout>
     );
   }
