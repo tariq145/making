@@ -1,20 +1,20 @@
 export default [
    {
-     title: "A title",
-     artist: "An Artist",
+     title: "Goosebumps",
+     artist: "Travis Scott",
      description: "This is the description",
      type: "Type",
      videoUrl: "Video url",
-     imgUrl: "Img url",
+     imgUrl: "https://thefader-res.cloudinary.com/images/w_1440,c_limit,f_auto,q_auto:eco/plgc63jlgyhhosmo1vgc/travis-scott.jpg",
      pubDate: "Pubdate",
    },
    {
-      title: "A title",
-      artist: "An Artist",
+      title: "Eat pussy",
+      artist: "K.dot",
       description: "This is the description",
       type: "Type",
       videoUrl: "Video url",
-      imgUrl: "Img url",
+      imgUrl: "https://usercontent2.hubstatic.com/13677643_f520.jpg",
       pubDate: "Pubdate",
     },
     {
@@ -23,7 +23,7 @@ export default [
       description: "This is the description",
       type: "Type",
       videoUrl: "Video url",
-      imgUrl: "Img url",
+      imgUrl: "https://thefader-res.cloudinary.com/images/w_1440,c_limit,f_auto,q_auto:eco/plgc63jlgyhhosmo1vgc/travis-scott.jpg",
       pubDate: "Pubdate",
     },
     {
@@ -32,7 +32,7 @@ export default [
       description: "This is the description",
       type: "Type",
       videoUrl: "Video url",
-      imgUrl: "Img url",
+      imgUrl: "https://thefader-res.cloudinary.com/images/w_1440,c_limit,f_auto,q_auto:eco/plgc63jlgyhhosmo1vgc/travis-scott.jpg",
       pubDate: "Pubdate",
     },
     {
@@ -41,7 +41,7 @@ export default [
       description: "This is the description",
       type: "Type",
       videoUrl: "Video url",
-      imgUrl: "Img url",
+      imgUrl: "https://thefader-res.cloudinary.com/images/w_1440,c_limit,f_auto,q_auto:eco/plgc63jlgyhhosmo1vgc/travis-scott.jpg",
       pubDate: "Pubdate",
     },
     {
@@ -50,7 +50,7 @@ export default [
       description: "This is the description",
       type: "Type",
       videoUrl: "Video url",
-      imgUrl: "Img url",
+      imgUrl: "https://thefader-res.cloudinary.com/images/w_1440,c_limit,f_auto,q_auto:eco/plgc63jlgyhhosmo1vgc/travis-scott.jpg",
       pubDate: "Pubdate",
     },
 ];
